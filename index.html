@@ -5,58 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   
   <title>Frontend Mentor | Profile card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <main>
+    <div class="container">
+      <div class="wrapper">
+        <img src="images/bg-pattern-card.svg" alt="">
+        <div class="content">
+          <img src="images/image-victor.jpg" alt="">
+          <h2>Victor Crest<span>26</span></h2>
+          <p class="profile-card-city">London</p>
 
-      <div class="profile__card--pattern-top">
-        <img src="images/bg-pattern-top.svg" alt="top pattern">
-      </div>
-      <div class="profile__card--pattern-bottom">
-        <img src="images/bg-pattern-bottom.svg" alt="top pattern">
-      </div>
-      <div class="profile__card--wrapper">
-        <div class="profile__card">
-          <div class="profile__card--pattern">
-            <img src="images/bg-pattern-card.svg" alt="">
-          </div>
-      <div class="profile__card--image">
-        <img src="images/image-victor.jpg" alt="image of victor"></div>
-        <div class="profile__card--content">
-          <div class="profile__card--name">Victor Crest</div>
-          <div class="profile__card--age">26</div>
-          <div class="profile__card--location">London</div>
-        </div>
-        <div class="profile__card--stats">
-          <div class="profile__card--followers">
-            <p class="profile__card--count">80K</p>
-            <p class="profile__card--name">Followers</p>
-          </div>
-          <div class="profile__card--likes">
-            <p class="profile__card--count">803K</p>
-            <p class="profile__card--name">Likes</p>
-          </div>
-          <div class="profile__card--photos">
-            <p class="profile__card--count">1.4K</p>
-            <p class="profile__card--name">Photos</p>
+          <div class="footer">
+            <div>
+              <p class="num">80K</p>
+              <p>Followers</p>
+            </div>
+            <div>
+              <p class="num">803K</p>
+              <p>Likes</p>
+            </div>
+            <div>
+              <p class="num">1.4K</p>
+              <p>Photos</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
- 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Glenda J. Reed</a>.
-  </div>
+    </div>  
+      
+  </main>
 </body>
 </html>

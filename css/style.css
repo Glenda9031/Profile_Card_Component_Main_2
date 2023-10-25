@@ -1,123 +1,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
+:root {
+  /* Primary */
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  /* Neutral */
+  --dark-gray: hsl(0, 0%, 59%);
+  /* Typography */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}
+
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
-  
-  :root {
-    --clr-primary-dark-cyan: hsl(185, 75%, 39%);
-    --clr-primary-very-dark-desaturated-blue: hsl(229, 23%, 23%);
-    --clr-primary-dark-grayish-blue: hsl(227, 10%, 46%);
-
-    --clr-neutral-dark-gray: hsl(0, 0%, 59%);
 }
 
 body {
-    background-color: var(--clr-primary-dark-cyan);
-    font-size: 1.125rem;
-    font-family: 'Kumbh', sans-serif;
-    height: 100vh;
-    width: 100vw;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--dark-cyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+/*    background: url('images/bg-pattern-top.svg'), url('images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw, bottom 50vh;*/
 }
 
-.profile__card--pattern-top {
-    position: relative;
-    bottom: 31.25rem;
-    right: 12.5rem;
-    margin: 0;
-}
-
-.profile__card--pattern-bottom {
-    position: absolute;
-    left: 50rem;
-    top: 12.5rem;
-}
-
-.profile__card--wrapper {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 25rem;
-    height: 25rem;
-    transform: translate(-50%, -50%);
-    filter: drop-shadow(0 1.25rem 1.25rem rgba(56, 56, 56, 0.5));
-    border-radius: .625rem;
-}
-
-.profile__card {
-    border-radius: 1.25rem;
-    background-color: #fff;
-}
-
-.profile__card--pattern {
-    width: 25rem;
-    height: 8.125rem;
-}
-
-.profile__card--image {
-    border-radius: 3.125rem;
-    border: 0.3125rem solid #fff;
-    position: absolute;
-    top: 5.625rem;
-    right: 3.025rem; 
-}
-
-.profile__card--content {
-    margin-top: 9rem;
+.container {
+    margin: 0 auto;
     text-align: center;
-    color: var(--clr-primary-very-dark-desaturated-blue);
 }
 
-.profile__card--name {
+.wrapper {
+    max-width: 26.25rem;
+    background-color: #fff;
+    border-radius: 0.9375rem;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+.content img {
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 50%;
+    border: 0.25rem solid #fff;
+    margin-top: -3.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.content h2 {
+    color: var(--very-dark-desaturated-blue);
+    font-size: 1.125rem;
     font-weight: 700;
-    display: inline;
+    margin-bottom: 0.625rem;
 }
 
-.profile__card--age {
-    display: inline;
-    color: var(--clr-neutral-dark-gray);
-    font-size: 1rem;
+.content span {
+    color: var(--dark-grayish-blue);
+    font-weight: 400;
 }
 
-.profile__card--location {
-    padding: 0.625rem;
-    color: var(--clr-neutral-dark-gray);
-    font-size: 0.875rem;
+.content p {
+    color: var(--dark-grayish-blue);
+    font-size: .8125rem;
 }
 
-hr {
-    margin-top: .625rem;
-    height: 0.0625rem;
-    background-color: #ccc;
-    border: none;
-}
-
-.profile__card--stats {
+.footer {
     display: flex;
     justify-content: space-between;
-    margin: 0.25rem 3.125rem;
+    border-top: 0.0625rem solid var(--dark-grayish-blue);
+    padding: 1.875rem 3.125rem;
+}
+
+.footer p.num {
+    font-size: 1.125rem;
+    color: var(--very-dark-desaturated-blue);
     font-weight: 700;
-}
-
-.profile__card--name {
-    padding-top: 0;
-    letter-spacing: 0.125rem;
-    font-size: 0.8125rem;
-    color: var(--clr-neutral-dark-gray);
-}
-
-@media (min-weight: 23.4375rem) {
-    .profile__card--wrapper {
-        width: 21.875rem;
-        height: 18.75rem;
-    }
-    
-    .profile__card--image {
-        position: absolute;
-        top: 6.25rem;
-        right: 6.25rem;
-    }
+    margin-bottom: .3125rem;
+    margin-top: 1.875rem;
 }
